@@ -59,11 +59,11 @@
     
     NSGradient *outlineGradient = [[NSGradient alloc] initWithColorsAndLocations:outlineStartColor, 0.0, outlineEndColor, 1.0, nil];
     
-    NSBezierPath *outlinePath = [NSBezierPath bezierPathWithRoundedRect:self.bounds xRadius:5 yRadius:5];
+    NSBezierPath *outlinePath = [NSBezierPath bezierPathWithRoundedRect:[self bounds] xRadius:5 yRadius:5];
     
     [outlineGradient drawInBezierPath:outlinePath angle:90];
     
-    NSRect topLineRect = NSInsetRect(self.bounds, 1, 1);
+    NSRect topLineRect = NSInsetRect([self bounds], 1, 1);
     
     // inline top white highlight
     NSBezierPath *whiteLine = [NSBezierPath bezierPathWithRoundedRect:topLineRect xRadius:5 yRadius:5];
@@ -98,7 +98,7 @@
 	[titleAttributes setValue:[NSFont fontWithName:@"Helvetica" size:17] forKey:NSFontAttributeName];
     
     NSSize titleSize = [[self title] sizeWithAttributes:titleAttributes];
-    CGFloat verticalPoint = (self.bounds.size.height / 2) - (titleSize.height / 2);
+    CGFloat verticalPoint = ([self bounds].size.height / 2) - (titleSize.height / 2);
     CGFloat horizontalPoint = 15.0f;
     
     [[self title] drawAtPoint:NSMakePoint(horizontalPoint, verticalPoint) withAttributes:titleAttributes];
