@@ -1,7 +1,25 @@
 ##MRSubtleButton
 A subtle gradient button, derived from NSView.  No images involved.
 
-![Choco preview](http://www.fidgetbox.co.uk/mrsubtlebutton.png)
+![Button preview](http://www.fidgetbox.co.uk/mrsubtlebutton.png)
+
+##Usage
+MRSubtleButton can be integrated into an existing project using [CocoaPods](http://cocoapods.org). Simply add the necessary dependency to your `Podfile` as follows:
+
+```ruby
+platform :osx, '10.8'
+pod 'MRSubtleButton'
+...
+```
+
+Run `pod install` to install.
+
+Next, drag a custom view from the object library in Xcode into your UI, and change its class to MRSubtleButton.
+
+Finally, create an outlet for the button and set its title by sending it a message such as `[button setTitle:@"hello world"]`.
+
+##Limitations
+The current release lacks any event-handling capabilities.  Look for this in a future release, or feel free to add the required functionality yourself. :)
 
 ##License
 `MRSubtleButton` is provided under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).
