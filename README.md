@@ -7,7 +7,7 @@ A subtle gradient button, derived from NSView.  No images involved.
 MRSubtleButton can be integrated into an existing project using [CocoaPods](http://cocoapods.org). Simply add the necessary dependency to your `Podfile` as follows:
 
 ```ruby
-platform :osx, '10.8'
+platform :osx, '10.7'
 pod 'MRSubtleButton'
 ...
 ```
@@ -20,6 +20,8 @@ Finally, create an outlet for the button and set its title by sending it a messa
 
 ##Limitations
 The current release lacks any event-handling capabilities.  Look for this in a future release, or feel free to add the required functionality yourself. :)
+
+Please note that the code uses ARC (Automatic Reference Counting) and has only been tested against 10.7 and 10.8 deployment targets.
 
 ##License
 `MRSubtleButton` is provided under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).
