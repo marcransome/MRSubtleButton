@@ -104,4 +104,11 @@
     [[self title] drawAtPoint:NSMakePoint(horizontalPoint, verticalPoint) withAttributes:titleAttributes];
 }
 
+- (void)mouseDown:(NSEvent *)theEvent
+{
+    if ([_delegate respondsToSelector:@selector(subtleButtonEvent:from:)]) {
+        [_delegate subtleButtonEvent:theEvent from:self];
+    }
+}
+
 @end

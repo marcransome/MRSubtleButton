@@ -20,8 +20,15 @@
 
 #import <Cocoa/Cocoa.h>
 
+@protocol MRSubtleButtonDelegate <NSObject>
+
+- (void)subtleButtonEvent:(NSEvent *)event from:(id)sender;
+
+@end
+
 @interface MRSubtleButton : NSView
 
 @property (nonatomic, strong) NSString *title;
+@property (weak) id<MRSubtleButtonDelegate> delegate;
 
 @end
