@@ -1,7 +1,7 @@
 ##MRSubtleButton
 A subtle gradient button, derived from NSView.  No images involved.
 
-Example with custom colours:
+Example buttons with custom colours:
 
 ![Button preview](http://www.fidgetbox.co.uk/mrsubtlebutton2.png)
 
