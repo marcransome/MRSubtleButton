@@ -20,10 +20,8 @@ Next, drag a custom view from the object library in Xcode into your UI, and chan
 
 Finally, create an outlet for the button and set its title by sending it a message such as `[button setTitle:@"hello world"]`.
 
-##Limitations
-The current release lacks any event-handling capabilities.  Look for this in a future release, or feel free to add the required functionality yourself. :)
-
-Please note that the code uses ARC (Automatic Reference Counting) and has only been tested against 10.7 and 10.8 deployment targets.
+##Caveats
+Please note that the source code uses ARC (Automatic Reference Counting) and has only been tested against 10.7 and 10.8 deployment targets.
 
 ##License
 `MRSubtleButton` is provided under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).
