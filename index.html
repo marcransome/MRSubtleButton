@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Mrsubtlebutton by marcransome</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Mrsubtlebutton</h1>
+        <p>A subtle gradient button, derived from NSView.</p>
+
+        <p class="view"><a href="https://github.com/marcransome/MRSubtleButton">View the Project on GitHub <small>marcransome/MRSubtleButton</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/marcransome/MRSubtleButton/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/marcransome/MRSubtleButton/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/marcransome/MRSubtleButton">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>MRSubtleButton</h2>
+
+<p>A subtle gradient button, derived from NSView.  No images involved.</p>
+
+<p>Example buttons with custom colours:</p>
+
+<p><img src="http://www.fidgetbox.co.uk/mrsubtlebutton2.png" alt="Button preview"></p>
+
+<h2>Usage</h2>
+
+<p>MRSubtleButton can be integrated into an existing project using <a href="http://cocoapods.org">CocoaPods</a>. Simply add the necessary dependency to your <code>Podfile</code> as follows:</p>
+
+<div class="highlight"><pre><span class="n">platform</span> <span class="ss">:osx</span><span class="p">,</span> <span class="s1">'10.7'</span>
+<span class="n">pod</span> <span class="s1">'MRSubtleButton'</span>
+<span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</pre></div>
+
+<p>Run <code>pod install</code> to install.</p>
+
+<p>Next, drag a custom view from the object library in Xcode into your UI, and change its class to MRSubtleButton.</p>
+
+<p>Create an outlet for the button and implement the <code>&lt;MRSubtleButtonDelegate&gt;</code> protocol in your controller with the following method:</p>
+
+<div class="highlight"><pre><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">MRSubtleButtonEvent:</span><span class="p">(</span><span class="n">NSEvent</span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span> <span class="nf">with:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span><span class="p">;</span>
+</pre></div>
+
+<p>Finally, set the button's delegate to your controller object: <code>[button setDelegate:self]</code> and give the button a title: <code>[button setTitle:@"Hello World!"]</code>.</p>
+
+<p>If you have more than one button with the same delegate you can determine which button was pressed by inspecting its title:</p>
+
+<div class="highlight"><pre><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">MRSubtleButtonEvent:</span><span class="p">(</span><span class="n">NSEvent</span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span> <span class="nf">with:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span>
+<span class="p">{</span>
+  <span class="c1">// assuming sender is of class MRSubtleButton</span>
+  <span class="k">if</span> <span class="p">([[</span><span class="n">sender</span> <span class="n">title</span><span class="p">]</span> <span class="n">isEqualToString</span><span class="o">:</span><span class="s">@"Hello World!"</span><span class="p">])</span>
+  <span class="p">{</span>
+    <span class="c1">// your button event implementation</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2>Caveats</h2>
+
+<p>Please note that the source code uses ARC (Automatic Reference Counting) and has only been tested against 10.7 and 10.8 deployment targets.</p>
+
+<h2>License</h2>
+
+<p><code>MRSubtleButton</code> is provided under the terms of the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a>.</p>
+
+<h2>Comments or suggestions?</h2>
+
+<p>Email me at <a href="mailto://marc.ransome@fidgetbox.co.uk">marc.ransome@fidgetbox.co.uk</a> with bugs, feature requests or general comments and follow <a href="http://www.twitter.com/marcransome">@marcransome</a> for updates.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/marcransome">marcransome</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
