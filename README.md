@@ -39,6 +39,30 @@ If you have more than one button with the same delegate you can determine which 
 }
 ```
 
+##Custom colours and fonts
+Each button's gradient colour and font attributes (both colour and size) are adjustable.  Setting the button's colour is as easy as specifying a start and end colour for the gradient (note that the gradient starts at the bottom of the button):
+
+```objc
+NSColor *start = [NSColor colorWithCalibratedRed:205.0f/255.0f green:183.0f/255.0f blue:158.0f/255.0f alpha:1.0f];
+NSColor *end = [NSColor colorWithCalibratedRed:255.0f/255.0f green:239.0f/255.0f blue:213.0f/255.0f alpha:1.0f];
+
+[[self button] setGradientWithStartColor:start EndColor:end];
+```
+
+A subtle gradient works best, with an end colour that is just a few shades lighter than the start colour.
+ 
+Adjusting a button's font attributes is just as easy:
+
+
+```objc
+NSFont *buttonFont = [NSFont fontWithName:@"Helvetica" size:18.0f];
+NSColor *buttonFontColor = [NSColor colorWithCalibratedRed:139.0f/255.0f green:136.0f/255.0f blue:120.0f/255.0f alpha:1.0f]; 
+    
+[[self button] setFontAttributesWithFont:buttonFont Color:buttonFontColor];
+
+[[self button] setTitle:@"Customised button"];
+```
+
 ##Caveats
 Please note that the source code uses ARC (Automatic Reference Counting) and has only been tested against 10.7 and 10.8 deployment targets.
 
