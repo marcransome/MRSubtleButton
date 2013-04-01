@@ -63,6 +63,10 @@ NSColor *buttonFontColor = [NSColor colorWithCalibratedRed:139.0f/255.0f green:1
 [[self button] setTitle:@"Customised button"];
 ```
 
+An example using the preceding code:
+
+![Customised button](http://fidgetbox.co.uk/example_button.png)
+
 ##Caveats
 Please note that the source code uses ARC (Automatic Reference Counting) and has only been tested against 10.7 and 10.8 deployment targets.
 
