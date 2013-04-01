@@ -144,14 +144,14 @@
     }
 }
 
-- (void)setGradientWithStartColor:(NSColor *)startColor EndColor:(NSColor *)endColor
+- (void)setGradientWithStartColor:(NSColor *)startColor endColor:(NSColor *)endColor
 {
     [self setStartColor:startColor];
     [self setEndColor:endColor];
     [self setNeedsDisplay:YES];
 }
 
-- (void)setFontAttributesWithFont:(NSFont *)font Color:(NSColor *)fontColor
+- (void)setFontAttributesWithFont:(NSFont *)font color:(NSColor *)fontColor
 {
     [self setFont:font];
     [self setFontColor:fontColor];
