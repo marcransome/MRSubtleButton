@@ -46,7 +46,7 @@ Each button's gradient colour and font attributes (both colour and size) are adj
 NSColor *start = [NSColor colorWithCalibratedRed:205.0f/255.0f green:183.0f/255.0f blue:158.0f/255.0f alpha:1.0f];
 NSColor *end = [NSColor colorWithCalibratedRed:255.0f/255.0f green:239.0f/255.0f blue:213.0f/255.0f alpha:1.0f];
 
-[[self button] setGradientWithStartColor:start EndColor:end];
+[[self button] setGradientWithStartColor:start endColor:end];
 ```
 
 A subtle gradient works best, with an end colour that is just a few shades lighter than the start colour.
@@ -58,7 +58,7 @@ Adjusting a button's font attributes is just as easy:
 NSFont *buttonFont = [NSFont fontWithName:@"Helvetica" size:18.0f];
 NSColor *buttonFontColor = [NSColor colorWithCalibratedRed:139.0f/255.0f green:136.0f/255.0f blue:120.0f/255.0f alpha:1.0f]; 
     
-[[self button] setFontAttributesWithFont:buttonFont Color:buttonFontColor];
+[[self button] setFontAttributesWithFont:buttonFont color:buttonFontColor];
 
 [[self button] setTitle:@"Customised button"];
 ```
