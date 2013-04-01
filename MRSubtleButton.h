@@ -31,4 +31,7 @@
 @property (nonatomic, strong) NSString *title;
 @property (weak) id<MRSubtleButtonDelegate> delegate;
 
+- (void)setGradientWithStartColor:(NSColor *)startColor EndColor:(NSColor *)endColor;
+- (void)setFontAttributesWithFont:(NSFont *)fontColor Color:(NSColor *)fontColor;
+
 @end

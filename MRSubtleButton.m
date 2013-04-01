@@ -20,6 +20,15 @@
 
 #import "MRSubtleButton.h"
 
+@interface MRSubtleButton ()
+
+@property (strong) NSColor *startColor;
+@property (strong) NSColor *endColor;
+@property (strong) NSFont *font;
+@property (strong) NSColor *fontColor;
+
+@end
+
 @implementation MRSubtleButton
 
 - (id)initWithFrame:(NSRect)frame
@@ -70,18 +79,29 @@
     
     [[NSColor whiteColor] set];
     [whiteLine fill];
-
+    
     // inline fill
-    CGFloat startInlineRed = 233.0f/255.0f;
-    CGFloat startInlineGreen = 233.0f/255.0f;
-    CGFloat startInlineBlue = 233.0f/255.0f;
+    NSColor *inlineStartColor;
+    if (_startColor) {
+        inlineStartColor = [self startColor];
+    }
+    else {
+        CGFloat startInlineRed = 233.0f/255.0f;
+        CGFloat startInlineGreen = 233.0f/255.0f;
+        CGFloat startInlineBlue = 233.0f/255.0f;
+        inlineStartColor = [NSColor colorWithCalibratedRed:startInlineRed green:startInlineGreen blue:startInlineBlue alpha:opaque];
+    }
     
-    CGFloat endInlineRed = 246.0f/255.0f;
-    CGFloat endInlineGreen = 246.0f/255.0f;
-    CGFloat endInlineBlue = 246.0f/255.0f;
-    
-    NSColor *inlineStartColor = [NSColor colorWithCalibratedRed:startInlineRed green:startInlineGreen blue:startInlineBlue alpha:opaque];
-    NSColor *inlineEndColor = [NSColor colorWithCalibratedRed:endInlineRed green:endInlineGreen blue:endInlineBlue alpha:opaque];
+    NSColor *inlineEndColor;
+    if (_endColor) {
+        inlineEndColor = [self endColor];
+    }
+    else {
+        CGFloat endInlineRed = 246.0f/255.0f;
+        CGFloat endInlineGreen = 246.0f/255.0f;
+        CGFloat endInlineBlue = 246.0f/255.0f;
+        inlineEndColor = [NSColor colorWithCalibratedRed:endInlineRed green:endInlineGreen blue:endInlineBlue alpha:opaque];
+    }
     
     NSRect inlineInsetRect = topLineRect;
     inlineInsetRect.size.height -= 1;
@@ -94,8 +114,21 @@
     
     // title
     NSMutableDictionary *titleAttributes = [[NSMutableDictionary alloc] init];
-	[titleAttributes setValue:[NSColor blackColor] forKey:NSForegroundColorAttributeName];
-	[titleAttributes setValue:[NSFont fontWithName:@"Helvetica" size:17] forKey:NSFontAttributeName];
+    
+    if (_font) {
+        [titleAttributes setValue:[self font] forKey:NSFontAttributeName];
+    }
+    else
+    {
+        [titleAttributes setValue:[NSFont fontWithName:@"Helvetica" size:17] forKey:NSFontAttributeName];
+    }
+    
+    if (_fontColor) {
+        [titleAttributes setValue:[self fontColor] forKey:NSForegroundColorAttributeName];
+    }
+    else {
+        [titleAttributes setValue:[NSColor blackColor] forKey:NSForegroundColorAttributeName];
+    }
     
     NSSize titleSize = [[self title] sizeWithAttributes:titleAttributes];
     CGFloat verticalPoint = ([self bounds].size.height / 2) - (titleSize.height / 2);
@@ -109,6 +142,20 @@
     if ([_delegate respondsToSelector:@selector(subtleButtonEvent:from:)]) {
         [_delegate subtleButtonEvent:theEvent from:self];
     }
+}
+
+- (void)setGradientWithStartColor:(NSColor *)startColor EndColor:(NSColor *)endColor
+{
+    [self setStartColor:startColor];
+    [self setEndColor:endColor];
+    [self setNeedsDisplay:YES];
+}
+
+- (void)setFontAttributesWithFont:(NSFont *)font Color:(NSColor *)fontColor
+{
+    [self setFont:font];
+    [self setFontColor:fontColor];
+    [self setNeedsDisplay:YES];
 }
 
 @end
