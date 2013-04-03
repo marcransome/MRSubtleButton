@@ -33,5 +33,6 @@
 
 - (void)setGradientWithStartColor:(NSColor *)startColor endColor:(NSColor *)endColor;
 - (void)setFontAttributesWithFont:(NSFont *)fontColor color:(NSColor *)fontColor;
+- (void)resetGradient;
 
 @end

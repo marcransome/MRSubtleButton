@@ -158,4 +158,11 @@
     [self setNeedsDisplay:YES];
 }
 
+- (void)resetGradient
+{
+    [self setStartColor:nil];
+    [self setEndColor:nil];
+    [self setNeedsDisplay:YES];
+}
+
 @end
