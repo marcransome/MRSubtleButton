@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>MRSubtleButton by Marc Ransome</title>
+    <title>MRSubtleButton by marcransome</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -49,7 +49,7 @@
 
 <p>Next, drag a custom view from the object library in Xcode into your UI, and change its class to MRSubtleButton.</p>
 
-<p>Create an outlet for the button and implement the <code>&lt;MRSubtleButtonDelegate&gt;</code> protocol in your controller with the following method:</p>
+<p>Create an outlet for the button and implement the <code>&lt;MRSubtleButtonDelegate&gt;</code> protocol in your controller with the following method (don't forget to <code>#import &lt;MRSubtleButton.h&gt;</code> in your controller):</p>
 
 <div class="highlight"><pre><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">MRSubtleButtonEvent:</span><span class="p">(</span><span class="n">NSEvent</span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span> <span class="nf">with:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span><span class="p">;</span>
 </pre></div>
@@ -67,6 +67,32 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+
+<h2>Custom colours and fonts</h2>
+
+<p>Each button's gradient colour and font attributes (both colour and size) are adjustable.  Setting the button's colour is as easy as specifying a start and end colour for the gradient (note that the gradient starts at the bottom of the button):</p>
+
+<div class="highlight"><pre><span class="n">NSColor</span> <span class="o">*</span><span class="n">start</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSColor</span> <span class="n">colorWithCalibratedRed</span><span class="o">:</span><span class="mf">205.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">green</span><span class="o">:</span><span class="mf">183.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">blue</span><span class="o">:</span><span class="mf">158.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">alpha</span><span class="o">:</span><span class="mf">1.0f</span><span class="p">];</span>
+<span class="n">NSColor</span> <span class="o">*</span><span class="n">end</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSColor</span> <span class="n">colorWithCalibratedRed</span><span class="o">:</span><span class="mf">255.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">green</span><span class="o">:</span><span class="mf">239.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">blue</span><span class="o">:</span><span class="mf">213.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">alpha</span><span class="o">:</span><span class="mf">1.0f</span><span class="p">];</span>
+
+<span class="p">[[</span><span class="n">self</span> <span class="n">button</span><span class="p">]</span> <span class="n">setGradientWithStartColor</span><span class="o">:</span><span class="n">start</span> <span class="n">endColor</span><span class="o">:</span><span class="n">end</span><span class="p">];</span>
+</pre></div>
+
+<p>A subtle gradient works best, with an end colour that is just a few shades lighter than the start colour.  To reset a button to the default light grey gradient use: <code>[button resetGradient]</code>.</p>
+
+<p>Adjusting a button's font attributes is just as easy:</p>
+
+<div class="highlight"><pre><span class="n">NSFont</span> <span class="o">*</span><span class="n">buttonFont</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSFont</span> <span class="n">fontWithName</span><span class="o">:</span><span class="s">@"Helvetica"</span> <span class="n">size</span><span class="o">:</span><span class="mf">18.0f</span><span class="p">];</span>
+<span class="n">NSColor</span> <span class="o">*</span><span class="n">buttonFontColor</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSColor</span> <span class="n">colorWithCalibratedRed</span><span class="o">:</span><span class="mf">139.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">green</span><span class="o">:</span><span class="mf">136.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">blue</span><span class="o">:</span><span class="mf">120.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">alpha</span><span class="o">:</span><span class="mf">1.0f</span><span class="p">];</span> 
+
+<span class="p">[[</span><span class="n">self</span> <span class="n">button</span><span class="p">]</span> <span class="n">setFontAttributesWithFont</span><span class="o">:</span><span class="n">buttonFont</span> <span class="n">color</span><span class="o">:</span><span class="n">buttonFontColor</span><span class="p">];</span>
+
+<span class="p">[[</span><span class="n">self</span> <span class="n">button</span><span class="p">]</span> <span class="n">setTitle</span><span class="o">:</span><span class="s">@"Customised button"</span><span class="p">];</span>
+</pre></div>
+
+<p>An example using the preceding code:</p>
+
+<p><img src="http://fidgetbox.co.uk/example_button.png" alt="Customised button"></p>
 
 <h2>Caveats</h2>
 
