@@ -49,7 +49,7 @@ NSColor *end = [NSColor colorWithCalibratedRed:255.0f/255.0f green:239.0f/255.0f
 [[self button] setGradientWithStartColor:start endColor:end];
 ```
 
-A subtle gradient works best, with an end colour that is just a few shades lighter than the start colour.
+A subtle gradient works best, with an end colour that is just a few shades lighter than the start colour.  To reset a button to the default light grey gradient use: `[button resetGradient]`.
  
 Adjusting a button's font attributes is just as easy:
 
