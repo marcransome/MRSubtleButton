@@ -20,19 +20,43 @@
 
 #import <Cocoa/Cocoa.h>
 
+/** The MRSubtleButtonDelegate protocol defines the method subtleButtonEvent:from:
+ * implemented by delegates of MRSubtleButton objects.
+ */
 @protocol MRSubtleButtonDelegate <NSObject>
 
+/** This method is called when an event involving an MRSubtleButton object occurs.
+ *
+ * @param event The event that occured.
+ * @param sender The object that sent the event.
+*/
 - (void)subtleButtonEvent:(NSEvent *)event from:(id)sender;
 
 @end
 
+/** The MRSubtleButton class draws a button-like view with a gradient and title. */
 @interface MRSubtleButton : NSView
 
 @property (nonatomic, strong) NSString *title;
 @property (weak) id<MRSubtleButtonDelegate> delegate;
 
+/** Sets the start and end colour of the button's gradient.  The gradient is linear
+ * and starts at the bottom edge of the button.
+ *
+ * @param startColor The start colour of the button's gradient.
+ * @param endColor The end colour of the button's gradient.
+ */
 - (void)setGradientWithStartColor:(NSColor *)startColor endColor:(NSColor *)endColor;
-- (void)setFontAttributesWithFont:(NSFont *)fontColor color:(NSColor *)fontColor;
+
+/** Sets the font and colour of the receiver's title using an `NSFont` and
+ * `NSColor` object.
+ *
+ * @param font The font applied to the button's title.
+ * @param fontColor The colour applied to the button's title.
+ */
+- (void)setFontAttributesWithFont:(NSFont *)font color:(NSColor *)fontColor;
+
+/** This method resets the button's gradient to the default light grey gradient. */
 - (void)resetGradient;
 
 @end
