@@ -48,8 +48,8 @@
  */
 - (void)setGradientWithStartColor:(NSColor *)startColor endColor:(NSColor *)endColor;
 
-/** Sets the font and colour of the receiver's title using an `NSFont` and
- * `NSColor` object.
+/** Sets the font and colour of the receiver's title using `NSFont` and
+ * `NSColor` objects.
  *
  * @param font The font applied to the button's title.
  * @param fontColor The colour applied to the button's title.
