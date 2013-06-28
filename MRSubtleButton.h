@@ -43,7 +43,12 @@ typedef enum {
 /** The MRSubtleButton class draws a button-like view with a gradient and title. */
 @interface MRSubtleButton : NSView
 
+/** The button's title. */
 @property (nonatomic, strong) NSString *title;
+
+/** The button's delegate object.  The delegate receives callbacks when the button
+ * generates events.
+ */
 @property (weak) id<MRSubtleButtonDelegate> delegate;
 
 /** Sets the start and end colour of the button's gradient.  The gradient is linear
@@ -62,7 +67,11 @@ typedef enum {
  */
 - (void)setFontAttributesWithFont:(NSFont *)font color:(NSColor *)fontColor;
 
-- (void)setTitleAlignment:(MRSubtleButtonTitleAlignment)alignment;
+/** Sets the button's text alignment.
+ *
+ * @param alignment The text alignment of the button's title.
+ */
+- (void)setTitleAlignment:(MRTitleAlignment)alignment;
 
 /** This method resets the button's gradient to the default light grey gradient. */
 - (void)resetGradient;
