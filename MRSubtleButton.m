@@ -26,7 +26,7 @@
 @property (strong) NSColor *endColor;
 @property (strong) NSFont *font;
 @property (strong) NSColor *fontColor;
-@property (assign) MRSubtleButtonTitleAlignment alignment;
+@property (assign) MRTitleAlignment alignment;
 
 @end
 
@@ -37,7 +37,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setTitle:@""];
-        [self setAlignment:MRSubtleButtonLeftAlignedTitle];
+        [self setAlignment:MRLeftTitleAlignment];
     }
     
     return self;
@@ -137,15 +137,15 @@
     
     CGFloat horizontalPoint;
     switch (_alignment) {
-        case MRSubtleButtonLeftAlignedTitle:
+        case MRLeftTitleAlignment:
             horizontalPoint = 15.0f;
             break;
             
-        case MRSubtleButtonRightAlignedTitle:
+        case MRRightTitleAlignment:
             horizontalPoint = [self bounds].size.width - titleSize.width - 15.0f;
             break;
             
-        case MRSubtleButtonCenterAlignedTitle:
+        case MRCenterTitleAlignment:
             horizontalPoint = ([self bounds].size.width / 2) - (titleSize.width / 2);
             break;
     }
@@ -174,7 +174,7 @@
     [self setNeedsDisplay:YES];
 }
 
-- (void)setTitleAlignment:(MRSubtleButtonTitleAlignment)alignment
+- (void)setTitleAlignment:(MRTitleAlignment)alignment
 {
     [self setAlignment:alignment];
 }

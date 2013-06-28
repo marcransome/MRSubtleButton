@@ -21,10 +21,10 @@
 #import <Cocoa/Cocoa.h>
 
 typedef enum {
-    MRSubtleButtonLeftAlignedTitle,
-    MRSubtleButtonRightAlignedTitle,
-    MRSubtleButtonCenterAlignedTitle
-} MRSubtleButtonTitleAlignment;
+    MRLeftTitleAlignment,
+    MRRightTitleAlignment,
+    MRCenterTitleAlignment
+} MRTitleAlignment;
 
 /** The MRSubtleButtonDelegate protocol defines the method subtleButtonEvent:from:
  * implemented by delegates of MRSubtleButton objects.
