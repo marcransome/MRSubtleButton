@@ -20,6 +20,12 @@
 
 #import <Cocoa/Cocoa.h>
 
+typedef enum {
+    MRSubtleButtonLeftAlignedTitle,
+    MRSubtleButtonRightAlignedTitle,
+    MRSubtleButtonCenterAlignedTitle
+} MRSubtleButtonTitleAlignment;
+
 /** The MRSubtleButtonDelegate protocol defines the method subtleButtonEvent:from:
  * implemented by delegates of MRSubtleButton objects.
  */
@@ -55,6 +61,8 @@
  * @param fontColor The colour applied to the button's title.
  */
 - (void)setFontAttributesWithFont:(NSFont *)font color:(NSColor *)fontColor;
+
+- (void)setTitleAlignment:(MRSubtleButtonTitleAlignment)alignment;
 
 /** This method resets the button's gradient to the default light grey gradient. */
 - (void)resetGradient;
