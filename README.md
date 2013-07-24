@@ -1,11 +1,11 @@
-##MRSubtleButton
+## MRSubtleButton
 A subtle gradient button, derived from NSView.  No images involved.
 
 Example buttons with custom colours:
 
 ![Button preview](http://www.fidgetbox.co.uk/mrsubtlebutton2.png)
 
-##Usage
+## Usage
 MRSubtleButton can be integrated into an existing project using [CocoaPods](http://cocoapods.org). Simply add the necessary dependency to your `Podfile` as follows:
 
 ```ruby
@@ -39,7 +39,7 @@ If you have more than one button with the same delegate you can determine which 
 }
 ```
 
-##Custom colours and fonts
+## Custom colours and fonts
 Each button's gradient colour and font attributes (both colour and size) are adjustable.  Setting the button's colour is as easy as specifying a start and end colour for the gradient (note that the gradient starts at the bottom of the button):
 
 ```objc
@@ -67,11 +67,11 @@ An example using the preceding code:
 
 ![Customised button](http://fidgetbox.co.uk/example_button.png)
 
-##Caveats
+## Caveats
 Please note that the source code uses ARC (Automatic Reference Counting) and has only been tested against 10.7 and 10.8 deployment targets.
 
-##License
+## License
 `MRSubtleButton` is provided under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).
 
-##Comments or suggestions?
+## Comments or suggestions?
 Email me at [marc.ransome@fidgetbox.co.uk](mailto://marc.ransome@fidgetbox.co.uk) with bugs, feature requests or general comments and follow [@marcransome](http://www.twitter.com/marcransome) for updates.
