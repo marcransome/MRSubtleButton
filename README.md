@@ -16,7 +16,7 @@ pod 'MRSubtleButton'
 
 Run `pod install` to install.
 
-Next, drag a custom view from the object library in Xcode into your UI, and change its class to MRSubtleButton.
+Next, drag a custom view from the object library in Xcode into your UI, and change its class to `MRSubtleButton`.
 
 Create an outlet for the button and implement the `<MRSubtleButtonDelegate>` protocol in your controller with the following method (don't forget to `#import <MRSubtleButton.h>` in your controller):
 
