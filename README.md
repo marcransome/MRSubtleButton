@@ -22,7 +22,7 @@ Create an outlet for the button and give the button a title `[button setTitle:@"
 
 
 ## Responding to events
-Implement the `<MRSubtleButtonDelegate>` protocol in your controller with the following method (don't forget to `#import <MRSubtleButton.h>` in your controller):
+Implement the `MRSubtleButtonDelegate` protocol in your controller with the following method (don't forget to `#import <MRSubtleButton.h>` in your controller):
 
 ```objc
 - (void)MRSubtleButtonEvent:(NSEvent *)event with:(id)sender;
@@ -30,7 +30,7 @@ Implement the `<MRSubtleButtonDelegate>` protocol in your controller with the fo
 
 Set the button's delegate to your controller object: `[button setDelegate:self]`.
 
-Determine the type of event that occured by inspecting the `event` objects `type` in your delegate method and respond accordingly:
+Determine the type of event that occured by inspecting the `event` object's `type` in your delegate method and respond accordingly:
 
 ```objc
 - (void)MRSubtleButtonEvent:(NSEvent *)event with:(id)sender
@@ -44,7 +44,7 @@ Determine the type of event that occured by inspecting the `event` objects `type
 }
 ```
 
-If you have more than one button with the same delegate you can determine which button was pressed by inspecting its title:
+If you have more than one button with the same delegate you can determine which button generated the event by inspecting its title:
 
 ```objc
 if ([[sender title] isEqualToString:@"Hello World!"])
