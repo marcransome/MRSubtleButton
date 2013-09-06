@@ -1,0 +1,2 @@
+#!/bin/bash
+appledoc --project-name MRSubtleButton --project-company "Fidgetbox" --company-id uk.co.fidgetbox --no-repeat-first-par --output doc-output .
