@@ -20,10 +20,18 @@
 
 #import "MRSubtleButton.h"
 
+static NSColor *defaultStartColor;
+static NSColor *defaultEndColor;
+static NSColor *defaultHighlightStartColor;
+static NSColor *defaultHighlightEndColor;
+
 @interface MRSubtleButton ()
 
 @property (strong) NSColor *startColor;
 @property (strong) NSColor *endColor;
+@property (strong) NSColor *highlightStartColor;
+@property (strong) NSColor *highlightEndColor;
+@property (assign) BOOL selected;
 @property (strong) NSFont *font;
 @property (strong) NSColor *fontColor;
 @property (assign) MRTitleAlignment alignment;
@@ -32,12 +40,24 @@
 
 @implementation MRSubtleButton
 
++ (void)initialize
+{
+    defaultStartColor = [NSColor colorWithCalibratedRed:233.0f/255.0f green:233.0f/255.0f blue:233.0f/255.0f alpha:1.0f];
+    defaultEndColor = [NSColor colorWithCalibratedRed:246.0f/255.0f green:246.0f/255.0f blue:246.0f/255.0f alpha:1.0f];
+    defaultHighlightStartColor = [NSColor colorWithCalibratedRed:184.0f/255.0f green:184.0f/255.0f blue:184.0f/255.0f alpha:1.0f];
+    defaultHighlightEndColor = [NSColor colorWithCalibratedRed:228.0f/255.0f green:228.0f/255.0f blue:228.0f/255.0f alpha:1.0f];
+}
+
 - (id)initWithFrame:(NSRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         _title = @"";
         _alignment = MRLeftTitleAlignment;
+        _startColor = defaultStartColor;
+        _endColor = defaultEndColor;
+        _highlightStartColor = defaultHighlightStartColor;
+        _highlightEndColor = defaultHighlightEndColor;
     }
     
     return self;
@@ -54,6 +74,18 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
+    NSColor *startColorForDrawing;
+    NSColor *endColorForDrawing;
+    
+    if (!_selected) {
+        startColorForDrawing = [self startColor];
+        endColorForDrawing = [self endColor];
+    }
+    else {
+        startColorForDrawing = [self highlightStartColor];
+        endColorForDrawing = [self highlightEndColor];
+    }
+    
     CGFloat opaque = 1.0f;
     
     // outline fill
@@ -82,33 +114,11 @@
     [[NSColor whiteColor] set];
     [whiteLine fill];
     
-    // inline fill
-    NSColor *inlineStartColor;
-    if (_startColor) {
-        inlineStartColor = [self startColor];
-    }
-    else {
-        CGFloat startInlineRed = 233.0f/255.0f;
-        CGFloat startInlineGreen = 233.0f/255.0f;
-        CGFloat startInlineBlue = 233.0f/255.0f;
-        inlineStartColor = [NSColor colorWithCalibratedRed:startInlineRed green:startInlineGreen blue:startInlineBlue alpha:opaque];
-    }
-    
-    NSColor *inlineEndColor;
-    if (_endColor) {
-        inlineEndColor = [self endColor];
-    }
-    else {
-        CGFloat endInlineRed = 246.0f/255.0f;
-        CGFloat endInlineGreen = 246.0f/255.0f;
-        CGFloat endInlineBlue = 246.0f/255.0f;
-        inlineEndColor = [NSColor colorWithCalibratedRed:endInlineRed green:endInlineGreen blue:endInlineBlue alpha:opaque];
-    }
-    
     NSRect inlineInsetRect = topLineRect;
     inlineInsetRect.size.height -= 1;
     
-    NSGradient *inlineGradient = [[NSGradient alloc] initWithColorsAndLocations:inlineStartColor, 0.0, inlineEndColor, 1.0, nil];
+    // inline fill
+    NSGradient *inlineGradient = [[NSGradient alloc] initWithColorsAndLocations:startColorForDrawing, 0.0, endColorForDrawing, 1.0, nil];
     
     NSBezierPath *inlinePath = [NSBezierPath bezierPathWithRoundedRect:inlineInsetRect xRadius:4 yRadius:4];
     
@@ -155,6 +165,19 @@
 
 - (void)mouseDown:(NSEvent *)theEvent
 {
+    [self setSelected:YES];
+    [self setNeedsDisplay:YES];
+    
+    if ([_delegate respondsToSelector:@selector(subtleButtonEvent:from:)]) {
+        [_delegate subtleButtonEvent:theEvent from:self];
+    }
+}
+
+- (void)mouseUp:(NSEvent *)theEvent
+{
+    [self setSelected:NO];
+    [self setNeedsDisplay:YES];
+    
     if ([_delegate respondsToSelector:@selector(subtleButtonEvent:from:)]) {
         [_delegate subtleButtonEvent:theEvent from:self];
     }
@@ -165,6 +188,12 @@
     [self setStartColor:startColor];
     [self setEndColor:endColor];
     [self setNeedsDisplay:YES];
+}
+
+- (void)setHighlightGradientWithStartColor:(NSColor *)startColor endColor:(NSColor *)endColor
+{
+    [self setHighlightStartColor:startColor];
+    [self setHighlightEndColor:endColor];
 }
 
 - (void)setFontAttributesWithFont:(NSFont *)font color:(NSColor *)fontColor
@@ -181,8 +210,10 @@
 
 - (void)resetGradient
 {
-    [self setStartColor:nil];
-    [self setEndColor:nil];
+    [self setStartColor:defaultStartColor];
+    [self setEndColor:defaultEndColor];
+    [self setHighlightStartColor:defaultHighlightStartColor];
+    [self setHighlightEndColor:defaultHighlightEndColor];    
     [self setNeedsDisplay:YES];
 }
 

@@ -39,8 +39,21 @@ If you have more than one button with the same delegate you can determine which 
 }
 ```
 
+## Responding to events
+To respond to events, inspect the `event` objects `type` in your delegate method and respond accordingly:
+
+```objc
+
+if ([event type] == NSLeftMouseDown) {
+    // the left mouse button was pressed
+}
+else if ([event type] == NSLeftMouseUp) {
+    // the left mouse button was released
+}
+```
+
 ## Custom colours and fonts
-Each button's gradient colour and font attributes (both colour and size) are adjustable.  Setting the button's colour is as easy as specifying a start and end colour for the gradient (note that the gradient starts at the bottom of the button):
+The button's gradient and font attributes (both colour and size) can be adjusted.  Setting the button's gradient is as easy as specifying a start and end colour (the gradient starts at the bottom edge of the button):
 
 ```objc
 NSColor *start = [NSColor colorWithCalibratedRed:205.0f/255.0f green:183.0f/255.0f blue:158.0f/255.0f alpha:1.0f];
@@ -49,10 +62,15 @@ NSColor *end = [NSColor colorWithCalibratedRed:255.0f/255.0f green:239.0f/255.0f
 [[self button] setGradientWithStartColor:start endColor:end];
 ```
 
-A subtle gradient works best, with an end colour that is just a few shades lighter than the start colour.  To reset a button to the default light grey gradient use: `[button resetGradient]`.
+A subtle gradient works best, with an end colour that is just a few shades lighter than the start colour.
+
+The button's highlight gradient&mdash;shown momentarily when the button is clicked&mdash; can be adjusted using the following method:
+
+```objc
+(void)setHighlightGradientWithStartColor:(NSColor *)startColor endColor:(NSColor *)endColor;
+```
  
 Adjusting a button's font attributes is just as easy:
-
 
 ```objc
 NSFont *buttonFont = [NSFont fontWithName:@"Helvetica" size:18.0f];

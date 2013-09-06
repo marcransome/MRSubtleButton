@@ -26,12 +26,12 @@ typedef enum {
     MRCenterTitleAlignment
 } MRTitleAlignment;
 
-/** The MRSubtleButtonDelegate protocol defines the method subtleButtonEvent:from:
- * implemented by delegates of MRSubtleButton objects.
+/** The `MRSubtleButtonDelegate` protocol defines the single method
+ * subtleButtonEvent:from: for delegates of MRSubtleButton objects.
  */
 @protocol MRSubtleButtonDelegate <NSObject>
 
-/** This method is called when an event involving an MRSubtleButton object occurs.
+/** This method is called when a mouse-down or mouse-up event occurs.
  *
  * @param event The event that occured.
  * @param sender The object that sent the event.
@@ -40,24 +40,36 @@ typedef enum {
 
 @end
 
-/** The MRSubtleButton class draws a button-like view with a gradient and title. */
+/** The `MRSubtleButton` class draws a button-like view with a gradient and
+ * title.
+ */
 @interface MRSubtleButton : NSView
 
 /** The button's title. */
 @property (nonatomic, strong) NSString *title;
 
-/** The button's delegate object.  The delegate receives callbacks when the button
- * generates events.
+/** The button's delegate object. The delegate must conform to the
+ * MRSubtleButtonDelegate Protocol and will receive messages when the button
+ * generates mouse-down and mouse-up events.
  */
 @property (weak) id<MRSubtleButtonDelegate> delegate;
 
-/** Sets the start and end colour of the button's gradient.  The gradient is linear
- * and starts at the bottom edge of the button.
+/** Sets the start and end colour of the button's gradient. The gradient is 
+ * linear and starts at the bottom edge of the button.
  *
  * @param startColor The start colour of the button's gradient.
  * @param endColor The end colour of the button's gradient.
  */
 - (void)setGradientWithStartColor:(NSColor *)startColor endColor:(NSColor *)endColor;
+
+/** Sets the start and end colour of the button's highlight gradient. The
+ * highlight gradient is shown when the button is clicked with the mouse. The
+ * gradient is linear and starts at the bottom edge of the button.
+ *
+ * @param startColor The start colour of the button's highlight gradient.
+ * @param endColor The end colour of the button's highlight gradient.
+ */
+- (void)setHighlightGradientWithStartColor:(NSColor *)startColor endColor:(NSColor *)endColor;
 
 /** Sets the font and colour of the receiver's title using `NSFont` and
  * `NSColor` objects.
@@ -73,7 +85,7 @@ typedef enum {
  */
 - (void)setTitleAlignment:(MRTitleAlignment)alignment;
 
-/** This method resets the button's gradient to the default light grey gradient. */
+/** This method resets the button's gradient colours to their defaults. */
 - (void)resetGradient;
 
 @end
