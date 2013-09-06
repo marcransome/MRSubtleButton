@@ -18,7 +18,7 @@ Run `pod install` to install.
 
 Next, drag a custom view from the object library in Xcode into your UI, and change its class to `MRSubtleButton`.
 
-Create an outlet for the button and give the button a title `[button setTitle:@"Hello World!"]`.
+Create an outlet for the button and give the button a title: `[button setTitle:@"Hello World!"]`.
 
 
 ## Responding to events
