@@ -36,8 +36,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setTitle:@""];
-        [self setAlignment:MRLeftTitleAlignment];
+        _title = @"";
+        _alignment = MRLeftTitleAlignment;
     }
     
     return self;
