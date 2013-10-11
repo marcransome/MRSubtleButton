@@ -93,4 +93,4 @@ Please note that the source code uses ARC (Automatic Reference Counting) and has
 `MRSubtleButton` is provided under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).
 
 ## Comments or suggestions?
-Email me at [marc.ransome@fidgetbox.co.uk](mailto://marc.ransome@fidgetbox.co.uk) with bugs, feature requests or general comments and follow [@marcransome](http://www.twitter.com/marcransome) for updates.
+Email me at [marc.ransome@fidgetbox.co.uk](mailto:marc.ransome@fidgetbox.co.uk) with bugs, feature requests or general comments and follow [@marcransome](http://www.twitter.com/marcransome) for updates.
