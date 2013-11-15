@@ -87,7 +87,7 @@ An example using the preceding code:
 ![Customised button](http://fidgetbox.co.uk/example_button.png)
 
 ## Caveats
-Please note that the source code uses ARC (Automatic Reference Counting) and has only been tested against 10.7 and 10.8 deployment targets.
+The source code for `MRSubtleButton` uses Automatic Reference Counting and has only been tested against 10.7, 10.8 and 10.9 deployment targets.
 
 ## License
 `MRSubtleButton` is provided under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).
