@@ -86,6 +86,14 @@ An example using the preceding code:
 
 ![Customised button](http://fidgetbox.co.uk/example_button.png)
 
+## Title alignment
+
+Control the title text alignment using `setTitleAlignment:` and one of the three constants `MRLeftTitleAlignment`, `MRRightTitleAlignment` and `MRCenterTitleAlignment`:
+
+```objc
+[[self button] setTitleAlignment:MRCenterTitleAlignment];
+```
+
 ## Caveats
 The source code for `MRSubtleButton` uses Automatic Reference Counting and has only been tested against 10.7, 10.8 and 10.9 deployment targets.
 
