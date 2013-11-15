@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1998CF7C1836D33D00701F76 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1998CF7B1836D33D00701F76 /* Cocoa.framework */; };
+		1998CF861836D33D00701F76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1998CF841836D33D00701F76 /* InfoPlist.strings */; };
+		1998CF881836D33D00701F76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1998CF871836D33D00701F76 /* main.m */; };
+		1998CF8C1836D33D00701F76 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1998CF8A1836D33D00701F76 /* Credits.rtf */; };
+		1998CF8F1836D33D00701F76 /* MRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1998CF8E1836D33D00701F76 /* MRAppDelegate.m */; };
+		1998CF921836D33D00701F76 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1998CF901836D33D00701F76 /* MainMenu.xib */; };
+		1998CF941836D33D00701F76 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1998CF931836D33D00701F76 /* Images.xcassets */; };
+		1998CF9B1836D33D00701F76 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1998CF9A1836D33D00701F76 /* XCTest.framework */; };
+		1998CF9C1836D33D00701F76 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1998CF7B1836D33D00701F76 /* Cocoa.framework */; };
+		1998CFA41836D33D00701F76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1998CFA21836D33D00701F76 /* InfoPlist.strings */; };
+		1998CFA61836D33D00701F76 /* MRSubtleButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1998CFA51836D33D00701F76 /* MRSubtleButtonTests.m */; };
+		1998CFB11836D37100701F76 /* MRSubtleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1998CFB01836D37100701F76 /* MRSubtleButton.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1998CF9D1836D33D00701F76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1998CF701836D33D00701F76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1998CF771836D33D00701F76;
+			remoteInfo = MRSubtleButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1998CF781836D33D00701F76 /* MRSubtleButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRSubtleButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1998CF7B1836D33D00701F76 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1998CF7E1836D33D00701F76 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1998CF7F1836D33D00701F76 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1998CF801836D33D00701F76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1998CF831836D33D00701F76 /* MRSubtleButton-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MRSubtleButton-Info.plist"; sourceTree = "<group>"; };
+		1998CF851836D33D00701F76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1998CF871836D33D00701F76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1998CF891836D33D00701F76 /* MRSubtleButton-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MRSubtleButton-Prefix.pch"; sourceTree = "<group>"; };
+		1998CF8B1836D33D00701F76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1998CF8D1836D33D00701F76 /* MRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRAppDelegate.h; sourceTree = "<group>"; };
+		1998CF8E1836D33D00701F76 /* MRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRAppDelegate.m; sourceTree = "<group>"; };
+		1998CF911836D33D00701F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1998CF931836D33D00701F76 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1998CF991836D33D00701F76 /* MRSubtleButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MRSubtleButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1998CF9A1836D33D00701F76 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1998CFA11836D33D00701F76 /* MRSubtleButtonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MRSubtleButtonTests-Info.plist"; sourceTree = "<group>"; };
+		1998CFA31836D33D00701F76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1998CFA51836D33D00701F76 /* MRSubtleButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRSubtleButtonTests.m; sourceTree = "<group>"; };
+		1998CFAF1836D37100701F76 /* MRSubtleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRSubtleButton.h; sourceTree = "<group>"; };
+		1998CFB01836D37100701F76 /* MRSubtleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRSubtleButton.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1998CF751836D33D00701F76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1998CF7C1836D33D00701F76 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1998CF961836D33D00701F76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1998CF9C1836D33D00701F76 /* Cocoa.framework in Frameworks */,
+				1998CF9B1836D33D00701F76 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1998CF6F1836D33D00701F76 = {
+			isa = PBXGroup;
+			children = (
+				1998CF811836D33D00701F76 /* MRSubtleButton */,
+				1998CF9F1836D33D00701F76 /* MRSubtleButtonTests */,
+				1998CF7A1836D33D00701F76 /* Frameworks */,
+				1998CF791836D33D00701F76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1998CF791836D33D00701F76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1998CF781836D33D00701F76 /* MRSubtleButton.app */,
+				1998CF991836D33D00701F76 /* MRSubtleButtonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1998CF7A1836D33D00701F76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1998CF7B1836D33D00701F76 /* Cocoa.framework */,
+				1998CF9A1836D33D00701F76 /* XCTest.framework */,
+				1998CF7D1836D33D00701F76 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1998CF7D1836D33D00701F76 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1998CF7E1836D33D00701F76 /* AppKit.framework */,
+				1998CF7F1836D33D00701F76 /* CoreData.framework */,
+				1998CF801836D33D00701F76 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1998CF811836D33D00701F76 /* MRSubtleButton */ = {
+			isa = PBXGroup;
+			children = (
+				1998CF8D1836D33D00701F76 /* MRAppDelegate.h */,
+				1998CF8E1836D33D00701F76 /* MRAppDelegate.m */,
+				1998CFAF1836D37100701F76 /* MRSubtleButton.h */,
+				1998CFB01836D37100701F76 /* MRSubtleButton.m */,
+				1998CF901836D33D00701F76 /* MainMenu.xib */,
+				1998CF931836D33D00701F76 /* Images.xcassets */,
+				1998CF821836D33D00701F76 /* Supporting Files */,
+			);
+			path = MRSubtleButton;
+			sourceTree = "<group>";
+		};
+		1998CF821836D33D00701F76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1998CF831836D33D00701F76 /* MRSubtleButton-Info.plist */,
+				1998CF841836D33D00701F76 /* InfoPlist.strings */,
+				1998CF871836D33D00701F76 /* main.m */,
+				1998CF891836D33D00701F76 /* MRSubtleButton-Prefix.pch */,
+				1998CF8A1836D33D00701F76 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1998CF9F1836D33D00701F76 /* MRSubtleButtonTests */ = {
+			isa = PBXGroup;
+			children = (
+				1998CFA51836D33D00701F76 /* MRSubtleButtonTests.m */,
+				1998CFA01836D33D00701F76 /* Supporting Files */,
+			);
+			path = MRSubtleButtonTests;
+			sourceTree = "<group>";
+		};
+		1998CFA01836D33D00701F76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1998CFA11836D33D00701F76 /* MRSubtleButtonTests-Info.plist */,
+				1998CFA21836D33D00701F76 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1998CF771836D33D00701F76 /* MRSubtleButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1998CFA91836D33D00701F76 /* Build configuration list for PBXNativeTarget "MRSubtleButton" */;
+			buildPhases = (
+				1998CF741836D33D00701F76 /* Sources */,
+				1998CF751836D33D00701F76 /* Frameworks */,
+				1998CF761836D33D00701F76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MRSubtleButton;
+			productName = MRSubtleButton;
+			productReference = 1998CF781836D33D00701F76 /* MRSubtleButton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1998CF981836D33D00701F76 /* MRSubtleButtonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1998CFAC1836D33D00701F76 /* Build configuration list for PBXNativeTarget "MRSubtleButtonTests" */;
+			buildPhases = (
+				1998CF951836D33D00701F76 /* Sources */,
+				1998CF961836D33D00701F76 /* Frameworks */,
+				1998CF971836D33D00701F76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1998CF9E1836D33D00701F76 /* PBXTargetDependency */,
+			);
+			name = MRSubtleButtonTests;
+			productName = MRSubtleButtonTests;
+			productReference = 1998CF991836D33D00701F76 /* MRSubtleButtonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1998CF701836D33D00701F76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Marc Ransome";
+				TargetAttributes = {
+					1998CF981836D33D00701F76 = {
+						TestTargetID = 1998CF771836D33D00701F76;
+					};
+				};
+			};
+			buildConfigurationList = 1998CF731836D33D00701F76 /* Build configuration list for PBXProject "MRSubtleButton" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1998CF6F1836D33D00701F76;
+			productRefGroup = 1998CF791836D33D00701F76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1998CF771836D33D00701F76 /* MRSubtleButton */,
+				1998CF981836D33D00701F76 /* MRSubtleButtonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1998CF761836D33D00701F76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1998CF861836D33D00701F76 /* InfoPlist.strings in Resources */,
+				1998CF941836D33D00701F76 /* Images.xcassets in Resources */,
+				1998CF8C1836D33D00701F76 /* Credits.rtf in Resources */,
+				1998CF921836D33D00701F76 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1998CF971836D33D00701F76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1998CFA41836D33D00701F76 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1998CF741836D33D00701F76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1998CFB11836D37100701F76 /* MRSubtleButton.m in Sources */,
+				1998CF8F1836D33D00701F76 /* MRAppDelegate.m in Sources */,
+				1998CF881836D33D00701F76 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1998CF951836D33D00701F76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1998CFA61836D33D00701F76 /* MRSubtleButtonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1998CF9E1836D33D00701F76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1998CF771836D33D00701F76 /* MRSubtleButton */;
+			targetProxy = 1998CF9D1836D33D00701F76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1998CF841836D33D00701F76 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1998CF851836D33D00701F76 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1998CF8A1836D33D00701F76 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1998CF8B1836D33D00701F76 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		1998CF901836D33D00701F76 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1998CF911836D33D00701F76 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		1998CFA21836D33D00701F76 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1998CFA31836D33D00701F76 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1998CFA71836D33D00701F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1998CFA81836D33D00701F76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1998CFAA1836D33D00701F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MRSubtleButton/MRSubtleButton-Prefix.pch";
+				INFOPLIST_FILE = "MRSubtleButton/MRSubtleButton-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1998CFAB1836D33D00701F76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MRSubtleButton/MRSubtleButton-Prefix.pch";
+				INFOPLIST_FILE = "MRSubtleButton/MRSubtleButton-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1998CFAD1836D33D00701F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MRSubtleButton.app/Contents/MacOS/MRSubtleButton";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MRSubtleButton/MRSubtleButton-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MRSubtleButtonTests/MRSubtleButtonTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1998CFAE1836D33D00701F76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MRSubtleButton.app/Contents/MacOS/MRSubtleButton";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MRSubtleButton/MRSubtleButton-Prefix.pch";
+				INFOPLIST_FILE = "MRSubtleButtonTests/MRSubtleButtonTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1998CF731836D33D00701F76 /* Build configuration list for PBXProject "MRSubtleButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1998CFA71836D33D00701F76 /* Debug */,
+				1998CFA81836D33D00701F76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1998CFA91836D33D00701F76 /* Build configuration list for PBXNativeTarget "MRSubtleButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1998CFAA1836D33D00701F76 /* Debug */,
+				1998CFAB1836D33D00701F76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1998CFAC1836D33D00701F76 /* Build configuration list for PBXNativeTarget "MRSubtleButtonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1998CFAD1836D33D00701F76 /* Debug */,
+				1998CFAE1836D33D00701F76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1998CF701836D33D00701F76 /* Project object */;
+}
