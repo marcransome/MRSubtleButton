@@ -207,7 +207,7 @@
 				ORGANIZATIONNAME = "Marc Ransome";
 				TargetAttributes = {
 					1998CF981836D33D00701F76 = {
-						TestTargetID = 1998CF771836D33D00701F76;
+						TestTargetID = 1998CF771836D33D00701F76 /* MRSubtleButton */;
 					};
 				};
 			};
