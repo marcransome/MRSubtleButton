@@ -9,4 +9,6 @@ Pod::Spec.new do |s|
   s.platform     = :osx, '10.7'
   s.source_files = 'MRSubtleButton/MRSubtleButton.{h,m}'
   s.requires_arc = true
+  s.screenshot   = "http://www.fidgetbox.co.uk/mrsubtlebutton2.png"
+  s.social_media_url = "https://twitter.com/marcransome"
 end
