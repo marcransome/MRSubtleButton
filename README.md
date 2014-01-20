@@ -3,7 +3,7 @@ A subtle gradient button, derived from NSView.  No images involved.
 
 Example buttons with custom colours:
 
-![Button preview](http://www.fidgetbox.co.uk/mrsubtlebutton2.png)
+![Button preview](http://www.fidgetbox.co.uk/github/subtlebutton.png)
 
 ## Usage
 MRSubtleButton can be integrated into an existing project using [CocoaPods](http://cocoapods.org). Simply add the necessary dependency to your `Podfile` as follows:
@@ -84,7 +84,7 @@ NSColor *buttonFontColor = [NSColor colorWithCalibratedRed:139.0f/255.0f green:1
 
 An example using the preceding code:
 
-![Customised button](http://fidgetbox.co.uk/example_button.png)
+![Customised button](http://www.fidgetbox.co.uk/github/subtlebutton2.png)
 
 ## Title alignment
 
