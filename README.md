@@ -1,4 +1,7 @@
 ## MRSubtleButton
+
+[![Version](https://img.shields.io/cocoapods/v/MRSubtleButton.svg?style=flat)](http://cocoadocs.org/docsets/MRSubtleButton) [![Platform](https://img.shields.io/cocoapods/p/MRSubtleButton.svg?style=flat)](http://cocoadocs.org/docsets/MRSubtleButton)
+
 A subtle gradient button, derived from NSView.  No images involved.
 
 Example buttons with custom colours:
