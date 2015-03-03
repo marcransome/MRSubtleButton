@@ -6,7 +6,7 @@ A subtle gradient button, derived from NSView.
 
 Here are some examples using custom fonts and gradients:
 
-![Button preview](https://www.fidgetbox.co.uk/github/mrsubtlebutton.png)
+<img src="https://www.fidgetbox.co.uk/github/mrsubtlebutton.png" alt="Button preview" width="442" height="431">
 
 ## Usage
 MRSubtleButton can be integrated into an existing project using [CocoaPods](http://cocoapods.org). Simply add the necessary dependency to your `Podfile` as follows:
