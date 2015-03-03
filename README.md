@@ -85,10 +85,6 @@ NSColor *buttonFontColor = [NSColor colorWithCalibratedRed:139.0f/255.0f green:1
 [[self button] setTitle:@"Customised button"];
 ```
 
-An example using the preceding code:
-
-![Customised button](https://www.fidgetbox.co.uk/github/subtlebutton2.png)
-
 ## Title alignment
 
 Control the title text alignment using `setTitleAlignment:` and one of the three constants `MRLeftTitleAlignment`, `MRRightTitleAlignment` and `MRCenterTitleAlignment`:
