@@ -98,7 +98,7 @@ Control the title text alignment using `setTitleAlignment:` and one of the three
 ```
 
 ## Caveats
-The source code for `MRSubtleButton` uses Automatic Reference Counting and has only been tested against 10.7, 10.8 and 10.9 deployment targets.
+The source code for `MRSubtleButton` uses Automatic Reference Counting and has been tested against 10.7 through 10.10 deployment targets.
 
 ## License
 `MRSubtleButton` is provided under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).
