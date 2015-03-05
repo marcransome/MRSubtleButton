@@ -50,7 +50,7 @@ Determine the type of event that occured by inspecting the `event` object's `typ
 If you have more than one button with the same delegate you can determine which button generated the event by pointer comparison:
 
 ```objc
-if (sender == self.button)
+if (sender == [self button])
 {
   // your button event implementation
 }
