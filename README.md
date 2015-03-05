@@ -28,7 +28,7 @@ Create an outlet for the button and give the button a title: `[button setTitle:@
 Implement the `MRSubtleButtonDelegate` protocol in your controller with the following method (don't forget to `#import <MRSubtleButton.h>` in your controller):
 
 ```objc
-- (void)MRSubtleButtonEvent:(NSEvent *)event with:(id)sender;
+- (void)subtleButtonEvent:(NSEvent *)event with:(id)sender;
 ```
 
 Set the button's delegate to your controller object: `[button setDelegate:self]`.
@@ -36,7 +36,7 @@ Set the button's delegate to your controller object: `[button setDelegate:self]`
 Determine the type of event that occured by inspecting the `event` object's `type` in your delegate method and respond accordingly:
 
 ```objc
-- (void)MRSubtleButtonEvent:(NSEvent *)event with:(id)sender
+- (void)subtleButtonEvent:(NSEvent *)event with:(id)sender
 {
   if ([event type] == NSLeftMouseDown) {
     // the left mouse button was pressed
@@ -47,10 +47,10 @@ Determine the type of event that occured by inspecting the `event` object's `typ
 }
 ```
 
-If you have more than one button with the same delegate you can determine which button generated the event by inspecting its title:
+If you have more than one button with the same delegate you can determine which button generated the event by pointer comparison:
 
 ```objc
-if ([[sender title] isEqualToString:@"Hello World!"])
+if (sender == self.button)
 {
   // your button event implementation
 }
