@@ -1,51 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>MRSubtleButton by Marc Ransome</title>
+    <meta name="description" content="MRSubtleButton : A subtle gradient button derived from NSView.">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>MRSubtleButton</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>MRSubtleButton</h1>
-        <p>A subtle gradient button, derived from NSView.</p>
 
-        <p class="view"><a href="https://github.com/marcransome/MRSubtleButton">View the Project on GitHub <small>marcransome/MRSubtleButton</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/marcransome/MRSubtleButton">View on GitHub</a>
 
+          <h1 id="project_title">MRSubtleButton</h1>
+          <h2 id="project_tagline">A subtle gradient button derived from NSView.</h2>
 
-        <ul>
-          <li><a href="https://github.com/marcransome/MRSubtleButton/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/marcransome/MRSubtleButton/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/marcransome/MRSubtleButton">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/marcransome/MRSubtleButton/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/marcransome/MRSubtleButton/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h2>
-<a name="mrsubtlebutton" class="anchor" href="#mrsubtlebutton"><span class="octicon octicon-link"></span></a>MRSubtleButton</h2>
+<a id="mrsubtlebutton" class="anchor" href="#mrsubtlebutton" aria-hidden="true"><span class="octicon octicon-link"></span></a>MRSubtleButton</h2>
 
-<p>A subtle gradient button, derived from NSView.  No images involved.</p>
+<p><a href="http://cocoadocs.org/docsets/MRSubtleButton"><img src="https://img.shields.io/cocoapods/v/MRSubtleButton.svg?style=flat" alt="Version"></a> <a href="http://cocoadocs.org/docsets/MRSubtleButton"><img src="https://img.shields.io/cocoapods/p/MRSubtleButton.svg?style=flat" alt="Platform"></a></p>
 
-<p>Example buttons with custom colours:</p>
+<p>A subtle gradient button derived from NSView.</p>
 
-<p><img src="http://www.fidgetbox.co.uk/github/subtlebutton.png" alt="Button preview"></p>
+<p>Here are some examples using custom fonts and gradients:</p>
+
+<p><img src="https://www.fidgetbox.co.uk/github/mrsubtlebutton.png" alt="Button preview" width="442"></p>
 
 <h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <p>MRSubtleButton can be integrated into an existing project using <a href="http://cocoapods.org">CocoaPods</a>. Simply add the necessary dependency to your <code>Podfile</code> as follows:</p>
 
-<div class="highlight highlight-ruby"><pre><span class="n">platform</span> <span class="ss">:osx</span><span class="p">,</span> <span class="s1">'10.7'</span>
-<span class="n">pod</span> <span class="s1">'MRSubtleButton'</span>
-<span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</pre></div>
+<div class="highlight highlight-ruby"><pre>platform <span class="pl-c1">:osx</span>, <span class="pl-s1"><span class="pl-pds">'</span>10.7<span class="pl-pds">'</span></span>
+pod <span class="pl-s1"><span class="pl-pds">'</span>MRSubtleButton<span class="pl-pds">'</span></span>
+...</pre></div>
 
 <p>Run <code>pod install</code> to install.</p>
 
@@ -54,97 +58,90 @@
 <p>Create an outlet for the button and give the button a title: <code>[button setTitle:@"Hello World!"]</code>.</p>
 
 <h2>
-<a name="responding-to-events" class="anchor" href="#responding-to-events"><span class="octicon octicon-link"></span></a>Responding to events</h2>
+<a id="responding-to-events" class="anchor" href="#responding-to-events" aria-hidden="true"><span class="octicon octicon-link"></span></a>Responding to events</h2>
 
 <p>Implement the <code>MRSubtleButtonDelegate</code> protocol in your controller with the following method (don't forget to <code>#import &lt;MRSubtleButton.h&gt;</code> in your controller):</p>
 
-<div class="highlight highlight-objc"><pre><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">MRSubtleButtonEvent:</span><span class="p">(</span><span class="n">NSEvent</span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span> <span class="nf">with:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span><span class="p">;</span>
-</pre></div>
+<div class="highlight highlight-objc"><pre>- (<span class="pl-st">void</span>)subtleButtonEvent:(<span class="pl-s3">NSEvent</span> *)event with:(<span class="pl-st">id</span>)sender;</pre></div>
 
 <p>Set the button's delegate to your controller object: <code>[button setDelegate:self]</code>.</p>
 
 <p>Determine the type of event that occured by inspecting the <code>event</code> object's <code>type</code> in your delegate method and respond accordingly:</p>
 
-<div class="highlight highlight-objc"><pre><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">MRSubtleButtonEvent:</span><span class="p">(</span><span class="n">NSEvent</span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span> <span class="nf">with:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span>
-<span class="p">{</span>
-  <span class="k">if</span> <span class="p">([</span><span class="n">event</span> <span class="n">type</span><span class="p">]</span> <span class="o">==</span> <span class="n">NSLeftMouseDown</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// the left mouse button was pressed</span>
-  <span class="p">}</span>
-  <span class="k">else</span> <span class="k">if</span> <span class="p">([</span><span class="n">event</span> <span class="n">type</span><span class="p">]</span> <span class="o">==</span> <span class="n">NSLeftMouseUp</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// the left mouse button was released</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+<div class="highlight highlight-objc"><pre>- (<span class="pl-st">void</span>)subtleButtonEvent:(<span class="pl-s3">NSEvent</span> *)event with:(<span class="pl-st">id</span>)sender
+{
+  <span class="pl-k">if</span> ([event <span class="pl-s3">type</span>] == NSLeftMouseDown) {
+    <span class="pl-c">// the left mouse button was pressed</span>
+  }
+  <span class="pl-k">else</span> <span class="pl-k">if</span> ([event <span class="pl-s3">type</span>] == NSLeftMouseUp) {
+    <span class="pl-c">// the left mouse button was released</span>
+  }
+}</pre></div>
 
-<p>If you have more than one button with the same delegate you can determine which button generated the event by inspecting its title:</p>
+<p>If you have more than one button with the same delegate you can determine which button generated the event by pointer comparison:</p>
 
-<div class="highlight highlight-objc"><pre><span class="k">if</span> <span class="p">([[</span><span class="n">sender</span> <span class="n">title</span><span class="p">]</span> <span class="n">isEqualToString</span><span class="o">:</span><span class="s">@"Hello World!"</span><span class="p">])</span>
-<span class="p">{</span>
-  <span class="c1">// your button event implementation</span>
-<span class="p">}</span>
-</pre></div>
+<div class="highlight highlight-objc"><pre><span class="pl-k">if</span> (sender == [<span class="pl-v">self</span> <span class="pl-s3">button</span>])
+{
+  <span class="pl-c">// your button event implementation</span>
+}</pre></div>
 
 <h2>
-<a name="custom-colours-and-fonts" class="anchor" href="#custom-colours-and-fonts"><span class="octicon octicon-link"></span></a>Custom colours and fonts</h2>
+<a id="custom-colours-and-fonts" class="anchor" href="#custom-colours-and-fonts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom colours and fonts</h2>
 
 <p>The button's gradient and font attributes (both colour and size) can be adjusted.  Setting the button's gradient is as easy as specifying a start and end colour (the gradient starts at the bottom edge of the button):</p>
 
-<div class="highlight highlight-objc"><pre><span class="n">NSColor</span> <span class="o">*</span><span class="n">start</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSColor</span> <span class="n">colorWithCalibratedRed</span><span class="o">:</span><span class="mf">205.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">green</span><span class="o">:</span><span class="mf">183.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">blue</span><span class="o">:</span><span class="mf">158.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">alpha</span><span class="o">:</span><span class="mf">1.0f</span><span class="p">];</span>
-<span class="n">NSColor</span> <span class="o">*</span><span class="n">end</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSColor</span> <span class="n">colorWithCalibratedRed</span><span class="o">:</span><span class="mf">255.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">green</span><span class="o">:</span><span class="mf">239.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">blue</span><span class="o">:</span><span class="mf">213.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">alpha</span><span class="o">:</span><span class="mf">1.0f</span><span class="p">];</span>
+<div class="highlight highlight-objc"><pre><span class="pl-s3">NSColor</span> *start = [<span class="pl-s3">NSColor</span> <span class="pl-s3">colorWithCalibratedRed:</span><span class="pl-c1">205</span>.<span class="pl-c1">0f</span>/<span class="pl-c1">255</span>.<span class="pl-c1">0f</span> <span class="pl-s3">green:</span><span class="pl-c1">183</span>.<span class="pl-c1">0f</span>/<span class="pl-c1">255</span>.<span class="pl-c1">0f</span> <span class="pl-s3">blue:</span><span class="pl-c1">158</span>.<span class="pl-c1">0f</span>/<span class="pl-c1">255</span>.<span class="pl-c1">0f</span> <span class="pl-s3">alpha:</span><span class="pl-c1">1</span>.<span class="pl-c1">0f</span>];
+<span class="pl-s3">NSColor</span> *end = [<span class="pl-s3">NSColor</span> <span class="pl-s3">colorWithCalibratedRed:</span><span class="pl-c1">255</span>.<span class="pl-c1">0f</span>/<span class="pl-c1">255</span>.<span class="pl-c1">0f</span> <span class="pl-s3">green:</span><span class="pl-c1">239</span>.<span class="pl-c1">0f</span>/<span class="pl-c1">255</span>.<span class="pl-c1">0f</span> <span class="pl-s3">blue:</span><span class="pl-c1">213</span>.<span class="pl-c1">0f</span>/<span class="pl-c1">255</span>.<span class="pl-c1">0f</span> <span class="pl-s3">alpha:</span><span class="pl-c1">1</span>.<span class="pl-c1">0f</span>];
 
-<span class="p">[[</span><span class="n">self</span> <span class="n">button</span><span class="p">]</span> <span class="n">setGradientWithStartColor</span><span class="o">:</span><span class="n">start</span> <span class="n">endColor</span><span class="o">:</span><span class="n">end</span><span class="p">];</span>
-</pre></div>
+[[<span class="pl-v">self</span> <span class="pl-s3">button</span>] <span class="pl-s3">setGradientWithStartColor:</span>start <span class="pl-s3">endColor:</span>end];</pre></div>
 
 <p>A subtle gradient works best, with an end colour that is just a few shades lighter than the start colour.</p>
 
 <p>The button's highlight gradient—shown momentarily when the button is clicked— can be adjusted using the following method:</p>
 
-<div class="highlight highlight-objc"><pre><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">setHighlightGradientWithStartColor</span><span class="o">:</span><span class="p">(</span><span class="n">NSColor</span> <span class="o">*</span><span class="p">)</span><span class="n">startColor</span> <span class="n">endColor</span><span class="o">:</span><span class="p">(</span><span class="n">NSColor</span> <span class="o">*</span><span class="p">)</span><span class="n">endColor</span><span class="p">;</span>
-</pre></div>
+<div class="highlight highlight-objc"><pre>(<span class="pl-st">void</span>)setHighlightGradientWithStartColor:(<span class="pl-s3">NSColor</span> *)startColor endColor:(<span class="pl-s3">NSColor</span> *)endColor;</pre></div>
 
 <p>Adjusting a button's font attributes is just as easy:</p>
 
-<div class="highlight highlight-objc"><pre><span class="n">NSFont</span> <span class="o">*</span><span class="n">buttonFont</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSFont</span> <span class="n">fontWithName</span><span class="o">:</span><span class="s">@"Helvetica"</span> <span class="n">size</span><span class="o">:</span><span class="mf">18.0f</span><span class="p">];</span>
-<span class="n">NSColor</span> <span class="o">*</span><span class="n">buttonFontColor</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSColor</span> <span class="n">colorWithCalibratedRed</span><span class="o">:</span><span class="mf">139.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">green</span><span class="o">:</span><span class="mf">136.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">blue</span><span class="o">:</span><span class="mf">120.0f</span><span class="o">/</span><span class="mf">255.0f</span> <span class="n">alpha</span><span class="o">:</span><span class="mf">1.0f</span><span class="p">];</span> 
+<div class="highlight highlight-objc"><pre><span class="pl-s3">NSFont</span> *buttonFont = [<span class="pl-s3">NSFont</span> <span class="pl-s3">fontWithName:</span><span class="pl-s1"><span class="pl-pds">@"</span>Helvetica<span class="pl-pds">"</span></span> <span class="pl-s3">size:</span><span class="pl-c1">18</span>.<span class="pl-c1">0f</span>];
+<span class="pl-s3">NSColor</span> *buttonFontColor = [<span class="pl-s3">NSColor</span> <span class="pl-s3">colorWithCalibratedRed:</span><span class="pl-c1">139</span>.<span class="pl-c1">0f</span>/<span class="pl-c1">255</span>.<span class="pl-c1">0f</span> <span class="pl-s3">green:</span><span class="pl-c1">136</span>.<span class="pl-c1">0f</span>/<span class="pl-c1">255</span>.<span class="pl-c1">0f</span> <span class="pl-s3">blue:</span><span class="pl-c1">120</span>.<span class="pl-c1">0f</span>/<span class="pl-c1">255</span>.<span class="pl-c1">0f</span> <span class="pl-s3">alpha:</span><span class="pl-c1">1</span>.<span class="pl-c1">0f</span>]; 
 
-<span class="p">[[</span><span class="n">self</span> <span class="n">button</span><span class="p">]</span> <span class="n">setFontAttributesWithFont</span><span class="o">:</span><span class="n">buttonFont</span> <span class="n">color</span><span class="o">:</span><span class="n">buttonFontColor</span><span class="p">];</span>
+[[<span class="pl-v">self</span> <span class="pl-s3">button</span>] <span class="pl-s3">setFontAttributesWithFont:</span>buttonFont <span class="pl-s3">color:</span>buttonFontColor];
 
-<span class="p">[[</span><span class="n">self</span> <span class="n">button</span><span class="p">]</span> <span class="n">setTitle</span><span class="o">:</span><span class="s">@"Customised button"</span><span class="p">];</span>
-</pre></div>
-
-<p>An example using the preceding code:</p>
-
-<p><img src="http://www.fidgetbox.co.uk/github/subtlebutton2.png" alt="Customised button"></p>
+[[<span class="pl-v">self</span> <span class="pl-s3">button</span>] <span class="pl-s3">setTitle:</span><span class="pl-s1"><span class="pl-pds">@"</span>Customised button<span class="pl-pds">"</span></span>];</pre></div>
 
 <h2>
-<a name="title-alignment" class="anchor" href="#title-alignment"><span class="octicon octicon-link"></span></a>Title alignment</h2>
+<a id="title-alignment" class="anchor" href="#title-alignment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Title alignment</h2>
 
 <p>Control the title text alignment using <code>setTitleAlignment:</code> and one of the three constants <code>MRLeftTitleAlignment</code>, <code>MRRightTitleAlignment</code> and <code>MRCenterTitleAlignment</code>:</p>
 
-<div class="highlight highlight-objc"><pre><span class="p">[[</span><span class="n">self</span> <span class="n">button</span><span class="p">]</span> <span class="n">setTitleAlignment</span><span class="o">:</span><span class="n">MRCenterTitleAlignment</span><span class="p">];</span>
-</pre></div>
+<div class="highlight highlight-objc"><pre>[[<span class="pl-v">self</span> <span class="pl-s3">button</span>] <span class="pl-s3">setTitleAlignment:</span>MRCenterTitleAlignment];</pre></div>
 
 <h2>
-<a name="caveats" class="anchor" href="#caveats"><span class="octicon octicon-link"></span></a>Caveats</h2>
+<a id="caveats" class="anchor" href="#caveats" aria-hidden="true"><span class="octicon octicon-link"></span></a>Caveats</h2>
 
-<p>The source code for <code>MRSubtleButton</code> uses Automatic Reference Counting and has only been tested against 10.7, 10.8 and 10.9 deployment targets.</p>
+<p>The source code for <code>MRSubtleButton</code> uses Automatic Reference Counting and has been tested against 10.7 through 10.10 deployment targets.</p>
 
 <h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p><code>MRSubtleButton</code> is provided under the terms of the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a>.</p>
 
 <h2>
-<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h2>
+<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact</h2>
 
 <p>Email me at <a href="mailto:marc.ransome@fidgetbox.co.uk">marc.ransome@fidgetbox.co.uk</a> or tweet <a href="http://www.twitter.com/marcransome">@marcransome</a>.</p>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/marcransome">marcransome</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MRSubtleButton maintained by <a href="https://github.com/marcransome">marcransome</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -155,6 +152,7 @@
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
+
 
   </body>
 </html>
